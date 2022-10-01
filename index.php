@@ -6,7 +6,7 @@ class CarInfo{
     {
     }
     public function getBrand(): Brand{
-        return @$this->brand;
+        return $this->brand;
     }
     public function getModel():Model{
         return $this->model;
