@@ -1,33 +1,29 @@
 <?php
-//
-class User{
-    private ?string $middleName = null;
-     public function __construct(private string $surname,private string $name,private string $date ){
+class CarInfo{
+    private string $owner;
+    private DateTime $productionDate;
+    public function __construct(private string $brand,private string $model,private string $country,)
+    {
     }
-    public function getName():string{
-        return $this->name;
+    public function getBrand(): Brand{
+        return @$this->brand;
     }
-     public function getSurname():string{
-         return $this->surname;
-     }
-     public function getDate():string{
-         return $this->date;
-     }
-    public function getmiddleName():?string{
-         return $this->middleName;
+    public function getModel():Model{
+        return $this->model;
     }
-    public function setmiddleName():void{
-         $this->middleName=$middleName;
+    public function changeBrand(string $newBrand):void{
+        $this->brand=$newBrand;
     }
-    public function GetFullName():string{
-        return $this->getName.
-        $this->getSurname.
-        $this->getDate;
-    }
- }
-$user1=new User(surname:'ПЫХИН',name:'ИВАН',date:'1999-1-1' );
- echo $user1->getSurname();
-echo $user1->getName();
-echo $user1->getDate();
-echo $user1->GetFullName();
-/
+}
+$car= new CarInfo(
+    model: new Model(
+        name:'x5',
+        country:new Country('Swedish','eu','+2'),
+        startProductionDate:'1990-01-01',
+        techSpec: ),
+    brand: new Brand(
+        name:'BMW',
+        country:new Country('Germany','eu','+2'),
+        owner:new User('Вася')
+    ),productionDate:new DateTime('2022-01-10')
+);
