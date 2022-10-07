@@ -1,7 +1,7 @@
 <?php
 class CarInfo{
 
-    public function __construct(private string $brand,private string $model)
+    public function __construct(private  $brand,private  $model)
     {
     }
     public function getBrand(): Brand{

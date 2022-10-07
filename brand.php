@@ -1,7 +1,7 @@
 <?php
 class Brand {
 
-    public function __construct(private string $name,private string $country,public string $owner)
+    public function __construct(private string $name,private  $country,public  $owner)
     {
     }
     public function getName():string{

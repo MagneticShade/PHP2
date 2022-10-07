@@ -1,5 +1,5 @@
 <?php
-class owner
+class User
 {
     public function __construct(private string $name)
     {

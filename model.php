@@ -2,7 +2,7 @@
 
 class Model
 {
-    public function __construct(private string $name, private string $country,private DateTime $startProductionDate,private Datetime $productionDate,private string $techSpec)
+    public function __construct(private string $name, private  $country,private DateTime $startProductionDate,private Datetime $productionDate,private string $techSpec)
     {
     }
 
