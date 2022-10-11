@@ -1,4 +1,5 @@
 <?php
+
 class Brand {
 
     public function __construct(private string $name,private  $country,public  $owner)
@@ -10,7 +11,7 @@ class Brand {
     public function getCountry():Country{
         return $this->country;
     }
-    public function getOwner():User{
+    public function getOwner():Owner{
         return $this->owner;
     }
 

@@ -1,6 +1,6 @@
 <?php
 class Country{
-    function __construct(private string $name,private string $region,private string $timezone)
+     public function __construct (private string $name,private string $region,private string $timezone)
     {
     }
     public function getName(): string

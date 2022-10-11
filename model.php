@@ -2,7 +2,7 @@
 
 class Model
 {
-    public function __construct(private string $name, private  $country,private DateTime $startProductionDate,private Datetime $productionDate,private string $techSpec)
+    public function __construct(private string $name, private  $country,private Datetime $productionDate,private string $techSpec)
     {
     }
 
@@ -17,9 +17,6 @@ class Model
     public function getCountry(): Country
     {
         return $this->country;
-    }
-    public function getStartProductionDate():DateTime{
-        return $this->startProductionDate;
     }
     public function getProductionDate():DateTime{
         return $this->productionDate;
