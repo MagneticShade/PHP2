@@ -1,4 +1,5 @@
 <?php
+
 class Owner
 {
     public function __construct(private string $name)

@@ -1,4 +1,5 @@
 <?php
+
 class CarInfo{
 
     public function __construct(private  $brand,private  $model)

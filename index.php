@@ -1,4 +1,10 @@
 <?php
+spl_autoload_register(function ($class) {
+    require __DIR__ . DIRECTORY_SEPARATOR . implode(
+            DIRECTORY_SEPARATOR,
+            explode('\\', str_replace('beta-test', '', $class))
+        ) . '.php';
+});
 $car= new CarInfo(
     brand: new Brand(
         name:'BMW',
@@ -12,3 +18,4 @@ $car= new CarInfo(
         techSpec:'asdf' ),
 );
 echo($car->getBrand()->getName());
+
